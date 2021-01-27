@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>CSS</title>
+</head>
+<body>
+    
+    <h1 align="center">CASCADING STYLE SHEET</h1><br><br>
+
+    <li type="circle">CSS stands for Cascading Style Sheets</li>
+    <li type="circle">CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+    <li type="circle">CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+    <li type="circle">External stylesheets are stored in CSS files</li>
+
+    <h2>CSS SYNTAX</h2>
+    <P>p {color:red; text-align:center;} </P>
+    <li type="circle">p is a selector in CSS (it points to the HTML element you want to style:</li>
+    <li type="circle">color is a property, and red is the property value</li>
+    <li type="circle">text-align is a property, and center is the property value</li>
+
+    <h2>CSS SELECTORS</h2>
+    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.<br>
+        We can divide CSS selectors into five categories:</p>
+    <li type="circle">Simple selectors (select elements based on name, id, class)</li>
+    <li type="circle">Combinator selectors (select elements based on a specific relationship between them)</li>
+    <li type="circle">Pseudo-class selectors (select elements based on a certain state)</li>
+    <li type="circle">Pseudo-elements selectors (select and style a part of an element)</li>
+    <li type="circle">Attribute selectors (select elements based on an attribute or attribute value)</li><br>
+
+    <h2>All CSS Simple Selectors</h2>   
+    <div class="container">
+    <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Selector</th>
+              <th>Example</th>
+              <th>Example description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#id</td>
+              <td>#firstname</td>
+              <td>Selects the element with id="firstname"</td>
+            </tr>
+            <tr>
+              <td>.class</td>
+              <td>.intro</td>
+              <td>Selects all elements with class="intro"</td>
+            </tr>
+            <tr>
+              <td>element.class</td>
+              <td>p.intro</td>
+              <td>	Selects only p elements with class="intro"</td>
+            </tr>
+            <tr>
+                <td>element</td>
+                <td>p</td>
+                <td>Selects all p elements</td>
+              </tr>
+              <tr>
+                <td>element,element,..</td>
+                <td>div, p</td>
+                <td>Selects all div elements and all p elements</td>
+              </tr>
+              <tr>
+                <td>*</td>
+                <td>*</td>
+                <td>Selects all elements</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Three ways to add CSS</h2>
+      <li type="circle">External CSS</li>
+      <li type="circle">Internal CSS</li>
+      <li type="circle">Inline CSS</li><br><br>
+
+      <p>External CSS:With an external style sheet, you can change the look of an entire website by changing just one file.<br>
+         Internal CSS:An internal style sheet may be used if one single HTML page has a unique style.<br>
+         Inline CSS:An inline style may be used to apply a unique style for a single element.</p>
+
+         <h2>CSS Comments</h2>
+         <p>Comments are used to explain the code, and may help when you edit the source code at a later date.<br>
+            Comments are ignored by browsers.<br>
+            A CSS comment is placed inside the "style" element, and starts with /* and ends with */:</p>
+
+
+    <h2>CSS Color Names</h2>
+    <p>In CSS, a color can be specified by using a predefined color name:</p>
+    <h3 style="color:Tomato;">Hello World</h3>
+    <p style="color:DodgerBlue;">Hello World</p>
+    <p style="color:MediumSeaGreen;">Hello World</p>
+
+    <h2>CSS Backgrounds</h2>
+    <p>The CSS background properties are used to define the background effects for elements.</p>
+    <li type="circle">background-color</li>
+    <li type="circle">background-image</li>
+    <li type="circle">background-repeat</li>
+    <li type="circle">background-attachment</li>
+    <li type="circle">background-position</li>
+
+    <h2>CSS Border style</h2>
+    <li type="circle">dotted - Defines a dotted border</li>
+    <li type="cirlce">dashed - Defines a dashed border</li>
+    <li type="circle">solid - Defines a solid border</li>
+    <li type="circle">double - Defines a double border</li>
+
+    <h2>CSS Margins</h2>
+    <li type="circle">margin-top</li>
+    <li type="circle">margin-right</li>
+    <li type="circle">margin-left</li>
+    <li type="circle">margin-bottom</li>
+
+    <h2>CSS Padding</h2>
+    <li type="circle">padding-top</li>
+    <li type="circle">padding-right</li>
+    <li type="circle">padding-left</li>
+    <li type="circle">padding-bottom</li>
+
+    <h2>CSS height and width Values</h2>
+    <p>The height and width properties are used to set the height and width of an element.</p>
+    <li type="circle">auto - This is default. The browser calculates the height and width</li>
+    <li type="circle">length - Defines the height/width in px, cm etc.</li>
+    <li type="circle">% - Defines the height/width in percent of the containing block</li>
+    <li type="circle">initial - Sets the height/width to its default value</li>
+    <li type="circle">inherit - The height/width will be inherited from its parent value</li>
+
+    <h2>CSS Box Model</h2>
+    <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.</p>
+    <li type="circle">Content - The content of the box, where text and images appear</li>
+    <li type="circle">Padding - Clears an area around the content. The padding is transparent</li>
+    <li type="circle">Border - A border that goes around the padding and content</li>
+    <li type="circle">Margin - Clears an area outside the border. The margin is transparent</li>
+
+
+   
+
+
+
+
+
+
+    
+
+
+
+</body>
+</html>

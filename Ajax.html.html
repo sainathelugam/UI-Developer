@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Ajax</title>
+</head>
+<body>
+    <h1 align="center">AJAX</h1>
+    <p>AJAX is not a programming language.</p><br>
+    <p>AJAX just uses a combination of:</p>
+    <li type="circle">A browser built-in XMLHttpRequest object (to request data from a web server)</li>
+    <li type="circle">JavaScript and HTML DOM (to display or use the data)</li>
+
+    <h2>The XMLHttpRequest Object</h2>
+    <p>The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>
+    
+    <h2>Create an XMLHttpRequest Object</h2>
+    <p>Syntax for creating an XMLHttpRequest object</p>
+
+    <h2>XMLHttpRequest Object Methods</h2>
+    <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>new XMLHttpRequest()</td>
+              <td>Creates a new XMLHttpRequest object</td>
+            </tr>      
+            <tr>
+              <td>abort()</td>
+              <td>	Cancels the current request</td>
+            </tr>
+            <tr>
+              <td>getAllResponseHeaders()</td>
+              <td>Returns header information</td>
+            </tr>
+            <tr>
+              <td>getResponseHeader()</td>
+              <td>Returns specific header information</td>
+            </tr>
+              <tr>
+                <td>open(method, url, async, user, psw)</td>
+                <td>Specifies the request
+
+                    method: the request type GET or POST.
+                    url: the file location
+                    async: true (asynchronous) or false (synchronous)
+                    user: optional user name
+                    psw: optional password</td>
+              </tr>      
+              <tr>
+                <td>send()</td>
+                <td>Sends the request to the server
+                    Used for GET requests</td>
+              </tr>
+              <tr>
+                <td>send(string)</td>
+                <td>Sends the request to the server.
+                    Used for POST requests</td>
+              </tr>
+              <tr>
+                <td>setRequestHeader()</td>
+                <td>Adds a label/value pair to the header to be sent</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>XMLHttpRequest Object Properties</h2>
+      <div class="container">            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Description</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>onreadystatechange</td>
+              <td>Defines a function to be called when the readyState property changes</td>
+            </tr>
+            <tr>
+              <td>readyState</td>
+              <td>	Holds the status of the XMLHttpRequest.<br>
+                0: request not initialized<br>
+                1: server connection established<br>
+                2: request received<br>
+                3: processing request<br>
+                4: request finished and response is ready</td>
+            </tr>
+            <tr>
+              <td>responseText</td>
+              <td>Returns the response data as a string</td>
+            </tr>
+            <tr>
+                <td>responseXML</td>
+                <td>Returns the response data as XML data</td>
+              </tr>
+              <tr>
+                <td>status</td>
+                <td>Returns the status-number of a request<br>
+                    200: "OK"<br>
+                    403: "Forbidden"<br>
+                    404: "Not Found"</td>
+              </tr>
+              <tr>
+                <td>statusText</td>
+                <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>GET or POST</h2>
+      <p>GET is simpler and faster than POST, and can be used in most cases.</p>
+      <li type="circle">A cached file is not an option (update a file or database on the server).</li>
+      <li type="circle">Sending a large amount of data to the server (POST has no size limitations).</li>
+      <li type="circle">Sending user input (which can contain unknown characters), POST is more robust and secure than GET.</li>
+
+      <div class="container">            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Description</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>setRequestHeader(header, value)</td>
+              <td>	Adds HTTP headers to the request<br>
+
+                header: specifies the header name<br>
+                value: specifies the header value</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Ajax Response</h2>
+      <p>The readyState property holds the status of the XMLHttpRequest.<br>
+        The onreadystatechange property defines a function to be executed when the readyState changes.<br>
+        The status property and the statusText property holds the status of the XMLHttpRequest object.</p>
+
+        <h2>Server Response Properties</h2>
+        <div class="container">            
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>responseText</td>
+                  <td>get the response data as a string</td>
+                </tr>
+                <tr>
+                  <td>responseXML</td>
+                  <td>get the response data as XML data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Server Response Methods</h2>
+          <div class="container">            
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>getResponseHeader()</td>
+                  <td>Returns specific header information from the server resource</td>
+                </tr>
+                <tr>
+                  <td>getAllResponseHeaders()</td>
+                  <td>Returns all the header information from the server resource</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
